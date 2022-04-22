@@ -1,5 +1,5 @@
 FROM alpine:3.5
-
+RUN apk --no-cache add ca-certificates
 #Create Ant Dir
 RUN mkdir -p /opt/ant/
 #Download And 1.9.8
