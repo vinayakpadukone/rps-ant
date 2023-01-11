@@ -31,11 +31,5 @@ pipeline {
                 }
             }
         }
-        stage('CleanUp workspace') {
-            steps {
-                sh ' echo CleanUp'
-                sh "docker rmi ${registry}:${BUILD_NUMBER}"
-            }
-        }
     }
 }
