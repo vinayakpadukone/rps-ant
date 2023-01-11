@@ -1,14 +1,14 @@
 #!groovy
 pipeline {
     environment {
-        registry = "vinaytr/rps-ant"
+        registry = "vinayakpadukone/rps-ant"
         registryCredentials = 'docker-credentials'
     }
     agent any
     stages {
         stage('Clone the Git Repository') {
             steps {
-                git credentialsId: 'git-credentials', url: 'https://github.com/9538541430/rps-ant.git'
+                git credentialsId: 'git-credentials', url: 'https://github.com/vinayakpadukone/rps-ant.git'
             }
         }
         stage('Building docker image') {
